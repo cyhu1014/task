@@ -16,9 +16,9 @@ def joinfile(fromdir,filename,todir):
         infile.close()
     outfile.close()
 if __name__=='__main__':
-    fromdir = input('Directory containing part files?')
-    filename = input('Name of file to be recreated?')
-    todir   = input('Directory to store recreated file?')
+    fromdir = input('Directory containing part files?\n')
+    filename = input('Name of file to be recreated?\n')
+    todir   = input('Directory to store recreated file?\n')
     
     try:
         joinfile(fromdir,filename,todir)

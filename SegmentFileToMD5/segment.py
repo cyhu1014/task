@@ -22,8 +22,8 @@ def split(fromfile,todir,chunksize):
         fileobj.close()
     return partnum
 if __name__=='__main__':
-    fromfile  = input('File to be split?')
-    todir     = input('Directory to store part files?')
+    fromfile  = input('File to be split?\n')
+    todir     = input('Directory to store part files?\n')
     chunksize = 4096
     absfrom,absto = map(os.path.abspath,[fromfile,todir])
     print('Splitting',absfrom,'to',absto,'by',chunksize)
