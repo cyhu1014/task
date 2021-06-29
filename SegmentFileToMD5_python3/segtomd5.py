@@ -1,6 +1,17 @@
 import os
 import sqlite3
 import hashlib
+def test_md5 ():
+    f = open("../../seg/part0002","rb")
+    m = hashlib.md5()
+    file = f.read()
+    file_size = len(file)
+    string1 = str(file).encode("utf-8")
+    m.update(string1)
+    md5_hash = m.hexdigest()
+    print(string1)
+    print(file_size,md5_hash)
+
 
 def segtomd5 (abs_path,database_name,table_name):
     con = sqlite3.connect(database_name)
@@ -38,7 +49,7 @@ if __name__=='__main__':
     database_name = input('Database name?\n')
     table_name = input('Table name?\n')
     fromfilepath = input('Filepath to be md5hash?\n')
-    segtomd5(fromfilepath,database_name,table_name)
+    # segtomd5(fromfilepath,database_name,table_name)
 
     
     
